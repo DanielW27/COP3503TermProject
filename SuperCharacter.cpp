@@ -21,6 +21,7 @@ bool SuperCharacter::getHasCape() {
     return hasCape;
 }
 
+<<<<<<< Updated upstream
 bool SuperCharacter::getHasSecretIdentity() {
 	return hasSecretIdentity;
 }
@@ -59,4 +60,40 @@ bool SuperCharacter::getIsRich() {
 
 bool SuperCharacter::getWearsBlack() {
 	return wearsBlack;
+=======
+bool SuperCharacter::getIsMarvel() {
+    return isMarvel;
+}
+
+bool SuperCharacter::getHasPowers() {
+    return hasPowers;
+}
+
+bool SuperCharacter::getIsXMen() {
+    return isXMen;
+}
+
+bool SuperCharacter::getisAvenger() {
+    return isAvenger;
+}
+
+bool SuperCharacter::getIsGuardian() {
+    return isGuardian;
+}
+
+bool SuperCharacter::getIsJusticeLeague() {
+    return isJusticeLeague;
+}
+
+bool SuperCharacter::getHasMask() {
+    return hasMask;
+}
+
+bool SuperCharacter::getYoungerThan25() {
+    return youngerThan25;
+}
+
+bool SuperCharacter::getWearsRed() {
+    return wearsRed;
+>>>>>>> Stashed changes
 }

@@ -45,6 +45,15 @@ public:
     bool getIsMale();
     bool getCanFly();
     bool getHasCape();
+    bool getIsMarvel();
+    bool getHasPowers();
+    bool getIsXMen();
+    bool getisAvenger();
+    bool getIsGuardian();
+    bool getIsJusticeLeague();
+    bool getHasMask();
+    bool getYoungerThan25();
+    bool getWearsRed();
 
 };
 

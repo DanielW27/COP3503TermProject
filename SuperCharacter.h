@@ -38,7 +38,6 @@ private:
     bool hasSecretIdentity;
 
 public:
-    //gfasgg
     /*
      * getter methods Start
      */
@@ -55,7 +54,16 @@ public:
     bool getHasMask();
     bool getYoungerThan25();
     bool getWearsRed();
-
+    bool getHasSecretIdentity();
+    bool getUsesTech();
+    bool getUsesMagic();
+    bool getIsAmerican();
+    bool getIsFromEarth();
+    bool getHasSuperStrength();
+    bool getIsGenius();
+    bool getKnowsMartialArts();
+    bool getIsRich();
+    bool getWearsBlack();
 };
 
 

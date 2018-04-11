@@ -38,6 +38,7 @@ private:
     bool hasSecretIdentity;
 
 public:
+    //gfasgg
     /*
      * getter methods Start
      */

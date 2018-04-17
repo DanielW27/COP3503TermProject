@@ -21,6 +21,42 @@ bool SuperCharacter::getHasCape() {
     return hasCape;
 }
 
+bool SuperCharacter::getIsMarvel() {
+    return isMarvel;
+}
+
+bool SuperCharacter::getHasPowers() {
+    return hasPowers;
+}
+
+bool SuperCharacter::getIsXMen() {
+    return isXMen;
+}
+
+bool SuperCharacter::getisAvenger() {
+    return isAvenger;
+}
+
+bool SuperCharacter::getIsGuardian() {
+    return isGuardian;
+}
+
+bool SuperCharacter::getIsJusticeLeague() {
+    return isJusticeLeague;
+}
+
+bool SuperCharacter::getHasMask() {
+    return hasMask;
+}
+
+bool SuperCharacter::getYoungerThan25() {
+    return youngerThan25;
+}
+
+bool SuperCharacter::getWearsRed() {
+    return wearsRed;
+}
+    
 bool SuperCharacter::getHasSecretIdentity() {
 	return hasSecretIdentity;
 }
@@ -58,53 +94,5 @@ bool SuperCharacter::getIsRich() {
 }
 
 bool SuperCharacter::getWearsBlack() {
-    return wearsBlack;
-}
-
-bool SuperCharacter::getIsMarvel() {
-    return isMarvel;
-}
-
-bool SuperCharacter::getHasPowers() {
-    return hasPowers;
-}
-
-bool SuperCharacter::getIsXMen() {
-    return isXMen;
-}
-
-bool SuperCharacter::getisAvenger() {
-    return isAvenger;
-}
-
-bool SuperCharacter::getIsGuardian() {
-    return isGuardian;
-}
-
-bool SuperCharacter::getIsJusticeLeague() {
-    return isJusticeLeague;
-}
-
-bool SuperCharacter::getHasMask() {
-    return hasMask;
-}
-
-bool SuperCharacter::getYoungerThan25() {
-    return youngerThan25;
-}
-
-bool SuperCharacter::getWearsRed() {
-    return wearsRed;
-}
-
-string SuperCharacter::getName() {
-    return name;
-}
-
-int SuperCharacter::getCertainty() {
-    return certainty;
-}
-
-void SuperCharacter::increaseCertainty(int tempCertainty) {
-    certainty++;
+	return wearsBlack;
 }

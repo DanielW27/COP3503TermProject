@@ -1,0 +1,14 @@
+//
+// Created by Brock on 4/16/2018.
+//
+
+#ifndef COP3503TERMPROJECT_QUESTION_H
+#define COP3503TERMPROJECT_QUESTION_H
+
+
+class Question {
+
+};
+
+
+#endif //COP3503TERMPROJECT_QUESTION_H

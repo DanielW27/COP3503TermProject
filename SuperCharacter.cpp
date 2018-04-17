@@ -96,3 +96,15 @@ bool SuperCharacter::getYoungerThan25() {
 bool SuperCharacter::getWearsRed() {
     return wearsRed;
 }
+
+string SuperCharacter::getName() {
+    return name;
+}
+
+int SuperCharacter::getCertainty() {
+    return certainty;
+}
+
+void SuperCharacter::increaseCertainty(int tempCertainty) {
+    certainty++;
+}

@@ -13,6 +13,7 @@ using namespace std;
 class SuperCharacter {
 private:
     string name;
+    int certainty = 0;
     bool isGood;
     bool isMale;
     bool canFly;
@@ -41,6 +42,8 @@ public:
     /*
      * getter methods Start
      */
+    string getName();
+    int getCertainty();
     bool getIsGood();
     bool getIsMale();
     bool getCanFly();
@@ -64,6 +67,11 @@ public:
     bool getKnowsMartialArts();
     bool getIsRich();
     bool getWearsBlack();
+    /*
+     * Getters methods end
+     */
+
+    void increaseCertainty(int tempCertainty);
 };
 
 

@@ -5,6 +5,7 @@
 #ifndef COP3503TERMPROJECT_SUPERCHARACTER_H
 #define COP3503TERMPROJECT_SUPERCHARACTER_H
 
+#include "vector"
 #include <iostream>
 #include "string"
 using namespace std;
@@ -14,6 +15,7 @@ class SuperCharacter {
 private:
     string name;
     int certainty = 0;
+    vector <bool> attributeArray;
     bool isGood;
     bool isMale;
     bool canFly;
@@ -42,6 +44,7 @@ public:
     /*
      * getter methods Start
      */
+    SuperCharacter();
     string getName();
     int getCertainty();
     bool getIsGood();
@@ -70,8 +73,6 @@ public:
     /*
      * Getters methods end
      */
-
-    void increaseCertainty(int tempCertainty);
 };
 
 

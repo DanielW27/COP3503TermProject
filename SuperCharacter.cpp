@@ -3,6 +3,7 @@
 //
 
 #include "SuperCharacter.h"
+#include <fstream>
 
 
 bool SuperCharacter::getIsGood() {
@@ -95,4 +96,54 @@ bool SuperCharacter::getIsRich() {
 
 bool SuperCharacter::getWearsBlack() {
 	return wearsBlack;
+}
+
+string SuperCharacter::getName() {
+    return name;
+}
+
+int SuperCharacter::getCertainty() {
+    return certainty;
+}
+
+SuperCharacter::SuperCharacter() {
+    /*
+     *receives character info from external file: start
+     */
+
+    string str;
+    ifstream infile("test2.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+
+    if (infile.is_open()){
+        int linecounter = 1;
+        while (getline(infile, str)) { // returns null when it reaches an empty line in the file
+            cout << "in";
+            if (linecounter == 1) {
+                name = str;
+            }
+
+            else {
+                if (str.compare("true") != ){
+                    attributeArray.push_back(true);
+                }
+
+                else if (str == "false"){
+                    attributeArray.push_back(false);
+                }
+                else {
+                    cout << "error: bool variable incorrect at line " << linecounter << " of " << name;
+                }
+            }
+            linecounter++;
+        }
+        infile.close();
+    }
+
+    else {
+        cout << "no input file avilable";
+    }
+
+    /*
+     * receives character info from external file: end
+     */
 }

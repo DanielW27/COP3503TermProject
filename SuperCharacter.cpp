@@ -117,17 +117,16 @@ SuperCharacter::SuperCharacter() {
     if (infile.is_open()){
         int linecounter = 1;
         while (getline(infile, str)) { // returns null when it reaches an empty line in the file
-            cout << "in";
             if (linecounter == 1) {
                 name = str;
             }
 
             else {
-                if (str.compare("true") != ){
+                if (str.find("true") != -1 ){ // statement is entered if "true" is on current line
                     attributeArray.push_back(true);
                 }
 
-                else if (str == "false"){
+                else if (str.find("false") != -1 ){ // statement is entered if "false" is on current line
                     attributeArray.push_back(false);
                 }
                 else {
@@ -146,4 +145,8 @@ SuperCharacter::SuperCharacter() {
     /*
      * receives character info from external file: end
      */
+}
+
+vector<bool> SuperCharacter::getattributeArray() {
+    return attributeArray;
 }

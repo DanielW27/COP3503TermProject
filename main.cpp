@@ -19,7 +19,7 @@ int main() {
 
     SuperCharacter batman;
 
-   superCharVector.push_back(batman);
+   //superCharVector.push_back(batman);
 
     /*
      *receives questions from external file: start
@@ -45,8 +45,6 @@ int main() {
     /*
      * receives questions from external file: end
      */
-
-    cout << "test: delete at line 46";
     return 0;
 }
 

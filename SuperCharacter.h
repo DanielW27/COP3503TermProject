@@ -46,6 +46,7 @@ public:
      */
     SuperCharacter();
     string getName();
+    vector<bool> getattributeArray();
     int getCertainty();
     bool getIsGood();
     bool getIsMale();

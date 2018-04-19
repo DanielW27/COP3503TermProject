@@ -6,7 +6,7 @@
 #include <fstream>
 
 
-bool SuperCharacter::getIsGood() {
+/*bool SuperCharacter::getIsGood() {
     return isGood;
 }
 
@@ -96,7 +96,7 @@ bool SuperCharacter::getIsRich() {
 
 bool SuperCharacter::getWearsBlack() {
 	return wearsBlack;
-}
+}*/
 
 string SuperCharacter::getName() {
     return name;
@@ -106,13 +106,13 @@ int SuperCharacter::getCertainty() {
     return certainty;
 }
 
-SuperCharacter::SuperCharacter() {
+SuperCharacter::SuperCharacter(string superTextFile) {
     /*
      *receives character info from external file: start
      */
 
     string str;
-    ifstream infile("test2.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+    ifstream infile(superTextFile, ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile.is_open()){
         int linecounter = 1;
@@ -129,6 +129,11 @@ SuperCharacter::SuperCharacter() {
                 else if (str.find("false") != -1 ){ // statement is entered if "false" is on current line
                     attributeArray.push_back(false);
                 }
+
+                else if (str == "}") {
+                    return;
+                }
+
                 else {
                     cout << "error: bool variable incorrect at line " << linecounter << " of " << name;
                 }
@@ -149,4 +154,8 @@ SuperCharacter::SuperCharacter() {
 
 vector<bool> SuperCharacter::getattributeArray() {
     return attributeArray;
+}
+
+void SuperCharacter::increaseCertainty() {
+    certainty++;
 }

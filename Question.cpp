@@ -4,6 +4,7 @@
 
 #include "Question.h"
 #include <iostream>
+#include "SuperCharacter.h"
 
 bool Question::getAnswer() {
     return answer;
@@ -24,10 +25,11 @@ void Question::setAnswer(bool tempAnswer) {
 
 void Question::askQuestion() {
     int userInput = 0;
-    cout << question;
-    cout << "(1) yes";
-    cout << "(2) no";
-    cout << "(3) don't know";
+    cout << question << endl;
+    cout << "(1) yes"<< endl;
+    cout << "(2) no"<< endl;
+    cout << "(3) don't know"<< endl;
+
 
     cin >> userInput;
 
@@ -45,4 +47,38 @@ void Question::askQuestion() {
         default:
             cout << userInput << " is not a proper input, please enter 1, 2, or 3.";
     }
+
+
+}
+
+void Question::setTrueFalseRatio() {
+    trueFalseRatio = abs(numTrue - numFalse);
+}
+
+void Question::increaseNumTrue() {
+    numTrue++;
+}
+
+void Question::increaseNumFalse() {
+    numFalse++;
+}
+
+void Question::resetNumTrue() {
+    numTrue = 0;
+}
+
+void Question::resetNumFalse() {
+    numFalse = 0;
+}
+
+int Question::getTrueFalseRatio() {
+    return trueFalseRatio;
+}
+
+void Question::setAlreadyAskedTrue() {
+    alreadyAsked = true;
+}
+
+bool Question::getAlreadyAsked() {
+    return alreadyAsked;
 }

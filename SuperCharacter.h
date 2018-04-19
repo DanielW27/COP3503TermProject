@@ -16,7 +16,8 @@ private:
     string name;
     int certainty = 0;
     vector <bool> attributeArray;
-    bool isGood;
+
+    /*bool isGood;
     bool isMale;
     bool canFly;
     bool hasCape;
@@ -38,17 +39,19 @@ private:
     bool isAmerican;
     bool usesMagic;
     bool usesTech;
-    bool hasSecretIdentity;
+    bool hasSecretIdentity;*/
 
 public:
     /*
      * getter methods Start
      */
-    SuperCharacter();
+    SuperCharacter(string superTextFile);
     string getName();
     vector<bool> getattributeArray();
+    void increaseCertainty();
+
     int getCertainty();
-    bool getIsGood();
+    /*bool getIsGood();
     bool getIsMale();
     bool getCanFly();
     bool getHasCape();
@@ -70,7 +73,7 @@ public:
     bool getIsGenius();
     bool getKnowsMartialArts();
     bool getIsRich();
-    bool getWearsBlack();
+    bool getWearsBlack();*/
     /*
      * Getters methods end
      */

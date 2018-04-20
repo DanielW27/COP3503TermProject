@@ -92,16 +92,16 @@ int main() {
                 if (superCharVector[l].getattributeArray()[k] == false){
                     questionVector[k].increaseNumFalse();
                 }
-
-                questionVector[k].setTrueFalseRatio();
-                questionVector[k].resetNumFalse();
-                questionVector[k].resetNumTrue();
             }
+            questionVector[k].setTrueFalseRatio();
+            questionVector[k].resetNumFalse();
+            questionVector[k].resetNumTrue();
         }
 
         int tempI = 0;
+        int lowerstTFratio = 100;
+
         for (int k = 0; k < questionVector.size(); k++){
-            int lowerstTFratio = 20;
             if (questionVector[k].getTrueFalseRatio() < lowerstTFratio && questionVector[k].getAlreadyAsked() == false){
                 lowerstTFratio = questionVector[k].getTrueFalseRatio();
                 tempI = k;

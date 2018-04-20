@@ -17,22 +17,46 @@ int main() {
     vector <Question> questionVector;
     vector <SuperCharacter> superCharVector;
 
-    SuperCharacter batman("Batman.txt");
+    /*SuperCharacter batman("Batman.txt");
     superCharVector.push_back(batman);
 
     SuperCharacter superman("Superman.txt");
     superCharVector.push_back(superman);
 
     SuperCharacter hela("Hela.txt");
-    superCharVector.push_back(hela);
+    superCharVector.push_back(hela);*/
+
+    /*
+     * Receives character names from text file: start FIXME read comments
+     */
+
+    string tempStr;
+    ifstream infile2("Character List.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+
+    if (infile2.is_open()){
+        int counter = 1;
+        while (getline(infile2, tempStr)) { // returns null when it reaches an empty line in the file
+            SuperCharacter tempSuperChar(tempStr + ".txt");
+            superCharVector.push_back(tempSuperChar); //write file to a vector of strings
+        }
+        infile2.close();
+    }
+
+    else {
+        cout << "no input file avilable";
+    }
+
+    /*
+     * Receives character names from text file: end
+     */
 
 
     /*
-     *receives questions from external file: start
+     *receives questions from external file: start FIXME read comments
      */
 
     string str;
-    ifstream infile("test.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+    ifstream infile("Question List.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile.is_open()){
         int counter = 1;
@@ -47,6 +71,15 @@ int main() {
     else {
         cout << "no input file avilable";
     }
+
+    /*
+     * receives questions from external file: end
+     */
+
+
+    /*
+     * Question selector algorithm start
+     */
 
     int i = 0;
     while (true) {
@@ -77,6 +110,9 @@ int main() {
         i = tempI;
 
         questionVector[i].askQuestion();
+        if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: tiggered when user answers don't know
+            continue;
+        }
         questionVector[i].setAlreadyAskedTrue();
 
         for (int j = 0; j < superCharVector.size(); j++){
@@ -84,7 +120,7 @@ int main() {
                 superCharVector[j].increaseCertainty();
             }
 
-            if (superCharVector[j].getCertainty() > 5) {
+            if (superCharVector[j].getCertainty() > 10) {
                 cout << "Your character is " << superCharVector[j].getName() << ".";
                 return(0);
             }
@@ -104,7 +140,7 @@ int main() {
     }
 
     /*
-     * receives questions from external file: end
+     * Question selector algoritm end
      */
     return 0;
 }

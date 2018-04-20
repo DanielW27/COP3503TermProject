@@ -43,6 +43,7 @@ void Question::askQuestion() {
             break;
 
         case 3:
+            alreadyAsked = true;
             return;
         default:
             cout << userInput << " is not a proper input, please enter 1, 2, or 3.";

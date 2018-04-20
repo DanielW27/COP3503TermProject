@@ -144,7 +144,8 @@ SuperCharacter::SuperCharacter(string superTextFile) {
     }
 
     else {
-        cout << "no input file avilable";
+        cout << "Error adding character, no input file found: " << superTextFile << " ensure character"
+                " name in Character List.txt matches Super Character's file name." << endl;
     }
 
     /*

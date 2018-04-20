@@ -9,6 +9,66 @@ using namespace std;
  * Main methods start
  */
 
+void questionSelection(vector <Question> questionVector, vector <SuperCharacter> superCharVector) {
+    int i = 0;
+    while (true) {
+        for (int k = 0; k < questionVector.size(); k++){
+            for (int l = 0; l < superCharVector.size(); l ++){
+                if (superCharVector[l].getattributeArray()[k] == true){
+                    questionVector[k].increaseNumTrue();
+                }
+
+                if (superCharVector[l].getattributeArray()[k] == false){
+                    questionVector[k].increaseNumFalse();
+                }
+            }
+            questionVector[k].setTrueFalseRatio();
+            questionVector[k].resetNumFalse();
+            questionVector[k].resetNumTrue();
+        }
+
+        int tempI = 0;
+        int lowerstTFratio = 100;
+
+        for (int k = 0; k < questionVector.size(); k++){
+            if (questionVector[k].getTrueFalseRatio() < lowerstTFratio && questionVector[k].getAlreadyAsked() == false){
+                lowerstTFratio = questionVector[k].getTrueFalseRatio();
+                tempI = k;
+            }
+        }
+        i = tempI;
+
+        questionVector[i].askQuestion();
+        if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: tiggered when user answers don't know
+            continue;
+        }
+        questionVector[i].setAlreadyAskedTrue();
+
+        for (int j = 0; j < superCharVector.size(); j++){
+            if (superCharVector[j].getattributeArray()[i] == questionVector[i].getAnswer()){
+                superCharVector[j].increaseCertainty();
+            }
+
+            if (superCharVector[j].getCertainty() > 10) {
+                cout << "Your character is " << superCharVector[j].getName() << ".";
+                return;
+            }
+
+            if (superCharVector[j].getattributeArray()[i] != questionVector[i].getAnswer()) {
+                superCharVector.erase(superCharVector.begin() + j);
+                j--;
+            }
+        }
+
+        if (superCharVector.size() == 1){
+            cout << "Your character is " << superCharVector[0].getName() << ".";
+            return;
+        }
+
+
+    }
+}
+
 /*
  * Main methods end
  */
@@ -81,68 +141,13 @@ int main() {
      * Question selector algorithm start
      */
 
-    int i = 0;
-    while (true) {
-        for (int k = 0; k < questionVector.size(); k++){
-            for (int l = 0; l < superCharVector.size(); l ++){
-                if (superCharVector[l].getattributeArray()[k] == true){
-                    questionVector[k].increaseNumTrue();
-                }
-
-                if (superCharVector[l].getattributeArray()[k] == false){
-                    questionVector[k].increaseNumFalse();
-                }
-            }
-            questionVector[k].setTrueFalseRatio();
-            questionVector[k].resetNumFalse();
-            questionVector[k].resetNumTrue();
-        }
-
-        int tempI = 0;
-        int lowerstTFratio = 100;
-
-        for (int k = 0; k < questionVector.size(); k++){
-            if (questionVector[k].getTrueFalseRatio() < lowerstTFratio && questionVector[k].getAlreadyAsked() == false){
-                lowerstTFratio = questionVector[k].getTrueFalseRatio();
-                tempI = k;
-            }
-        }
-        i = tempI;
-
-        questionVector[i].askQuestion();
-        if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: tiggered when user answers don't know
-            continue;
-        }
-        questionVector[i].setAlreadyAskedTrue();
-
-        for (int j = 0; j < superCharVector.size(); j++){
-            if (superCharVector[j].getattributeArray()[i] == questionVector[i].getAnswer()){
-                superCharVector[j].increaseCertainty();
-            }
-
-            if (superCharVector[j].getCertainty() > 10) {
-                cout << "Your character is " << superCharVector[j].getName() << ".";
-                return(0);
-            }
-
-            if (superCharVector[j].getattributeArray()[i] != questionVector[i].getAnswer()) {
-                superCharVector.erase(superCharVector.begin() + j);
-                j--;
-            }
-        }
-
-        if (superCharVector.size() == 1){
-            cout << "Your character is " << superCharVector[0].getName() << ".";
-            return(0);
-        }
-
-
-    }
+     questionSelection(questionVector, superCharVector);
 
     /*
      * Question selector algoritm end
      */
     return 0;
 }
+
 
 

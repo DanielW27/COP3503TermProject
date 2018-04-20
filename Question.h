@@ -13,7 +13,7 @@ class Question {
 private:
     string question;
     bool answer;
-    int associatedBool;
+    int associatedBool; //FIXME: delete if you don't use
     int trueFalseRatio;
     int numTrue = 0;
     int numFalse = 0;
@@ -23,7 +23,7 @@ public:
     Question(string tempQuestion, int tempAssociateBool);
     bool getAnswer();
     string getQuestion(); // for debugging
-    void setAnswer(bool tempAnswer);
+    void setAnswer(bool tempAnswer); //FIXME delete if never used
     void askQuestion();
     void setTrueFalseRatio();
     int getTrueFalseRatio();

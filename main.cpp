@@ -49,10 +49,10 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
                 superCharVector[j].increaseCertainty();
             }
 
-            if (superCharVector[j].getCertainty() > 10) {
+            /*if (superCharVector[j].getCertainty() > 10) {
                 cout << "Your character is " << superCharVector[j].getName() << ".";
                 return;
-            }
+            }*/
 
             if (superCharVector[j].getattributeArray()[i] != questionVector[i].getAnswer()) {
                 superCharVector.erase(superCharVector.begin() + j);

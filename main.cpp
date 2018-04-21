@@ -96,7 +96,7 @@ int main() {
     if (infile2.is_open()){
         int counter = 1;
         while (getline(infile2, tempStr)) { // returns null when it reaches an empty line in the file
-            SuperCharacter tempSuperChar(tempStr + ".txt");
+            SuperCharacter tempSuperChar(tempStr);
             superCharVector.push_back(tempSuperChar); //write file to a vector of strings
         }
         infile2.close();

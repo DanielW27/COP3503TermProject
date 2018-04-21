@@ -107,50 +107,70 @@ int SuperCharacter::getCertainty() {
 }
 
 SuperCharacter::SuperCharacter(string superTextFile) {
-    /*
-     *receives character info from external file: start
-     */
 
-    string str;
-    ifstream infile(superTextFile, ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
-    if (infile.is_open()){
-        int linecounter = 1;
-        while (getline(infile, str)) { // returns null when it reaches an empty line in the file
-            if (linecounter == 1) {
-                name = str;
-            }
-
-            else {
-                if (str.find("true") != -1 ){ // statement is entered if "true" is on current line
-                    attributeArray.push_back(true);
-                }
-
-                else if (str.find("false") != -1 ){ // statement is entered if "false" is on current line
-                    attributeArray.push_back(false);
-                }
-
-                else if (str == "}") {
-                    return;
-                }
-
-                else {
-                    cout << "error: bool variable incorrect at line " << linecounter << " of " << name;
-                }
-            }
-            linecounter++;
-        }
-        infile.close();
+    if (superTextFile == "Batman"){
+        name = "Batman";
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = true;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = true;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = true;// Char has SECRET IDENTITY
     }
 
     else {
-        cout << "Error adding character, no input file found: " << superTextFile << " ensure character"
-                " name in Character List.txt matches Super Character's file name." << endl;
-    }
 
-    /*
-     * receives character info from external file: end
-     */
+        /*
+         *receives character info from external file: start
+         */
+
+        string str;
+        ifstream infile(superTextFile,
+                        ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+
+        if (infile.is_open()) {
+            int linecounter = 1;
+            while (getline(infile, str)) { // returns null when it reaches an empty line in the file
+                if (linecounter == 1) {
+                    name = str;
+                } else {
+                    if (str.find("true") != -1) { // statement is entered if "true" is on current line
+                        attributeArray.push_back(true);
+                    } else if (str.find("false") != -1) { // statement is entered if "false" is on current line
+                        attributeArray.push_back(false);
+                    } else if (str == "}") {
+                        return;
+                    } else {
+                        cout << "error: bool variable incorrect at line " << linecounter << " of " << name;
+                    }
+                }
+                linecounter++;
+            }
+            infile.close();
+        } else {
+            cout << "Error adding character, no input file found: " << superTextFile << " ensure character"
+                    " name in Character List.txt matches Super Character's file name." << endl;
+        }
+
+        /*
+         * receives character info from external file: end
+         */
+    }
 }
 
 vector<bool> SuperCharacter::getattributeArray() {

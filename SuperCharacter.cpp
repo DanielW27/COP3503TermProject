@@ -306,7 +306,7 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[15] = false;// Char is GENIUS
         attributeArray[16] = true;// Char has SUPER STRENGTH
         attributeArray[17] = false;// Char uses MAGIC
-        attributeArray[18] = false;// Char uses TECH
+        attributeArray[18] = true;// Char uses TECH
         attributeArray[19] = true;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Robin"){

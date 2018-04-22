@@ -51,29 +51,26 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
         }
         i = tempI; // after for loop is exited, updates index variable i to question with ultimately lowest TF ratio.
 
-        questionVector[i].askQuestion();
+        questionVector[i].askQuestion(); // calls askQuestion method at index i of question vector (index of most appropriate question based on state of all character attributes).
         if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: triggered when user answers don't know.
             continue;
         }
-        questionVector[i].setAlreadyAskedTrue();
+        questionVector[i].setAlreadyAskedTrue(); // sets question field of alreadyAsked to true so current question isn't repeated
 
-        for (int j = 0; j < superCharVector.size(); j++){
+        for (int j = 0; j < superCharVector.size(); j++){ // loops through all characters
+            // checks if bool value of current Question's "answer" field matches bool value of current character's bool value for the corresponding attribute to current question.
             if (superCharVector[j].getattributeArray()[i] == questionVector[i].getAnswer()){
-                superCharVector[j].increaseCertainty();
+                superCharVector[j].increaseCertainty(); // if "if statement" is entered, increases characters certainty field
             }
 
-            /*if (superCharVector[j].getCertainty() > 10) {
-                cout << "Your character is " << superCharVector[j].getName() << ".";
-                return;
-            }*/
-
+            // checks if bool value of current Question's "answer" field doesn't match bool value of current character's bool value for the corresponding attribute to current question.
             if (superCharVector[j].getattributeArray()[i] != questionVector[i].getAnswer()) {
-                superCharVector.erase(superCharVector.begin() + j);
-                j--;
+                superCharVector.erase(superCharVector.begin() + j); // if "if statement" is entered, removes current character from possible characters array
+                j--; // decrements index value j  to account for change in array size.
             }
         }
 
-        if (superCharVector.size() == 1){
+        if (superCharVector.size() == 1){ // If only 1 character is left in characterArray, declares that character as the users choice.
             cout << "Your character is " << superCharVector[0].getName() << ".";
             return;
         }
@@ -89,15 +86,6 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
 int main() {
     vector <Question> questionVector;
     vector <SuperCharacter> superCharVector;
-
-    /*SuperCharacter batman("Batman.txt");
-    superCharVector.push_back(batman);
-
-    SuperCharacter superman("Superman.txt");
-    superCharVector.push_back(superman);
-
-    SuperCharacter hela("Hela.txt");
-    superCharVector.push_back(hela);*/
 
     /*
      * Receives character names from text file: start FIXME read comments

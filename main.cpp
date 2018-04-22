@@ -12,8 +12,8 @@ using namespace std;
 void questionSelection(vector <Question> questionVector, vector <SuperCharacter> superCharVector) {
     int i = 0;
     while (true) {
-        for (int k = 0; k < questionVector.size(); k++){
-            for (int l = 0; l < superCharVector.size(); l ++){
+        for (unsigned int k = 0; k < questionVector.size(); k++){
+            for (unsigned int l = 0; l < superCharVector.size(); l ++){
                 if (superCharVector[l].getattributeArray()[k] == true){
                     questionVector[k].increaseNumTrue();
                 }
@@ -30,7 +30,7 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
         int tempI = 0;
         int lowerstTFratio = 100;
 
-        for (int k = 0; k < questionVector.size(); k++){
+        for (unsigned int k = 0; k < questionVector.size(); k++){
             if (questionVector[k].getTrueFalseRatio() < lowerstTFratio && questionVector[k].getAlreadyAsked() == false){
                 lowerstTFratio = questionVector[k].getTrueFalseRatio();
                 tempI = k;
@@ -44,7 +44,7 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
         }
         questionVector[i].setAlreadyAskedTrue();
 
-        for (int j = 0; j < superCharVector.size(); j++){
+        for (unsigned int j = 0; j < superCharVector.size(); j++){
             if (superCharVector[j].getattributeArray()[i] == questionVector[i].getAnswer()){
                 superCharVector[j].increaseCertainty();
             }
@@ -94,7 +94,7 @@ int main() {
     ifstream infile2("Character List.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile2.is_open()){
-        int counter = 1;
+        //int counter = 1; //appears unused
         while (getline(infile2, tempStr)) { // returns null when it reaches an empty line in the file
             SuperCharacter tempSuperChar(tempStr);
             superCharVector.push_back(tempSuperChar); //write file to a vector of strings

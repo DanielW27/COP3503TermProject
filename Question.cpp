@@ -3,23 +3,15 @@
 //
 #include <iostream>
 #include "Question.h"
-#include "SuperCharacter.h"
 
+//simple method that returns value stored in Question's answer field.
 bool Question::getAnswer() {
     return answer;
 }
 
-Question::Question(const string tempQuestion, const int tempAssociatedBool) {
+//
+Question::Question(const string tempQuestion) {
     question = tempQuestion;
-    associatedBool = tempAssociatedBool;
-}
-
-string Question::getQuestion() {
-    return question;
-}
-
-void Question::setAnswer(bool tempAnswer) {
-    answer = tempAnswer;
 }
 
 void Question::askQuestion() {

@@ -97,7 +97,6 @@ int main() {
     ifstream infile2("Character List.txt", ios::in); // "Character List.txt" must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile2.is_open()){
-        int counter = 1;
         while (getline(infile2, tempStr)) { // returns null when it reaches an empty line in the file
             SuperCharacter tempSuperChar(tempStr); // creates an instance of the SuperCharacter class to be stored in SuperCharVector
             superCharVector.push_back(tempSuperChar); //adds character initialized on last line to SuperCharVector
@@ -122,17 +121,15 @@ int main() {
     ifstream infile("Question List.txt", ios::in); // "Question List.txt" must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile.is_open()){
-        int counter = 1;
         while (getline(infile, str)) { // returns null when it reaches an empty line in the file
-            Question tempQuestion(str, counter);
-            questionVector.push_back(tempQuestion); //write file to a vector of strings
-            counter++;
+            Question tempQuestion(str); // creates an instance of Question class to be stored in QuestionVector
+            questionVector.push_back(tempQuestion); // stores instance of question class created on last line in question vector
         }
         infile.close();
     }
 
     else {
-        cout << "no input file avilable";
+        cout << "Question List.txt not found."; // triggered if program can't find "Question List.txt"
     }
 
     /*
@@ -144,11 +141,12 @@ int main() {
      * Question selector algorithm start
      */
 
-    for (int i = 0; i < superCharVector.size(); i++){ // fixme: this is for testing purposes, delete later
+    cout << "available characters:" << endl;
+    for (int i = 0; i < superCharVector.size(); i++){ // prints out all available characters
         cout  << superCharVector[i].getName() << endl;
     }
 
-     questionSelection(questionVector, superCharVector);
+     questionSelection(questionVector, superCharVector); // calls question selection algorithm method
 
     /*
      * Question selector algoritm end

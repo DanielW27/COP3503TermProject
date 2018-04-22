@@ -52,7 +52,7 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
         i = tempI; // after for loop is exited, updates index variable i to question with ultimately lowest TF ratio.
 
         questionVector[i].askQuestion();
-        if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: tiggered when user answers don't know
+        if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: triggered when user answers don't know.
             continue;
         }
         questionVector[i].setAlreadyAskedTrue();

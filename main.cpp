@@ -9,11 +9,19 @@ using namespace std;
  * Main methods start
  */
 
+// method containing algorithm that chooses the best order of questions to find the desired character the fastest.
 void questionSelection(vector <Question> questionVector, vector <SuperCharacter> superCharVector) {
-    int i = 0;
-    while (true) {
-        for (int k = 0; k < questionVector.size(); k++){
-            for (int l = 0; l < superCharVector.size(); l ++){
+    int i = 0; // variable that stores the index of the best question each round
+
+    while (true) { // loops until return statement is reached when SuperCharVector.size()  == 1;
+        for (int k = 0; k < questionVector.size(); k++){ // for loop that iterates through vector array of questions
+            for (int l = 0; l < superCharVector.size(); l ++){ // nested for loop that iterates through each character
+
+                /* The "attribute array" of each character and the "question array" are ordered such that questionArray[k]
+                 * holds a question that corresponds to an attribute stored at attributeArray[k]*/
+
+                /* the following if statements tallies the number of characters whose attribute at index k are true, and the number at index k that are false
+                 * these values are stored in the fields "numTrue" and "numFalse" of questionArray[k].*/
                 if (superCharVector[l].getattributeArray()[k] == true){
                     questionVector[k].increaseNumTrue();
                 }
@@ -22,21 +30,26 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
                     questionVector[k].increaseNumFalse();
                 }
             }
+            //setTrueFalseRatio take the absolute value of the difference between numTrue and numFalse (abs(numTrue - numFalse)) and stores the result in the trueFalseRatio field.
             questionVector[k].setTrueFalseRatio();
             questionVector[k].resetNumFalse();
             questionVector[k].resetNumTrue();
         }
 
-        int tempI = 0;
-        int lowerstTFratio = 100;
+        int tempI = 0; // temp variable that stores the index of the current question with the lowest true false ratio
+        int lowestTFratio = 10000; // stores the current lowest true false ratio to be compared to the TF ratio of the following questions. initialized with arbitrary large value.
 
-        for (int k = 0; k < questionVector.size(); k++){
-            if (questionVector[k].getTrueFalseRatio() < lowerstTFratio && questionVector[k].getAlreadyAsked() == false){
-                lowerstTFratio = questionVector[k].getTrueFalseRatio();
-                tempI = k;
+        for (int k = 0; k < questionVector.size(); k++){ // loops through each question in questionVector
+            /*compares the current question's true false ratio with
+             * the lowest TF ratio encountered so far in the loop.
+             * Also filters out questions that have already been asked using the
+             * alreadyAsked field in questionVector[k].*/
+            if (questionVector[k].getTrueFalseRatio() < lowestTFratio && questionVector[k].getAlreadyAsked() == false){
+                lowestTFratio = questionVector[k].getTrueFalseRatio(); // updates lowest TF ratio if "if statement" is entered
+                tempI = k; // updates temp index to index of current question if "if statement" is entered
             }
         }
-        i = tempI;
+        i = tempI; // after for loop is exited, updates index variable i to question with ultimately lowest TF ratio
 
         questionVector[i].askQuestion();
         if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: tiggered when user answers don't know
@@ -140,6 +153,10 @@ int main() {
     /*
      * Question selector algorithm start
      */
+
+    for (int i = 0; i < superCharVector.size(); i++){ // fixme: this is for testing purposes, delete later
+        cout  << superCharVector[i].getName() << endl;
+    }
 
      questionSelection(questionVector, superCharVector);
 

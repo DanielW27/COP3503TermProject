@@ -512,7 +512,7 @@ SuperCharacter::SuperCharacter(string superTextFile) {
     attributeArray[4] = true;// Char is MARVEL
     attributeArray[5] = true;// Char has SUPER POWERS
     attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = false;// Char is AVENGER
+    attributeArray[7] = true;// Char is AVENGER
     attributeArray[8] = false;// Char is GUARDIAN
     attributeArray[9] = false;// Char is JUSTICE LEAGUE
     attributeArray[10] = false;// Char wears MASK

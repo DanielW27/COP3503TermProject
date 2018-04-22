@@ -18,7 +18,7 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
             for (int l = 0; l < superCharVector.size(); l ++){ // nested for loop that iterates through each character
 
                 /* The "attribute array" of each character and the "question array" are ordered such that questionArray[k]
-                 * holds a question that corresponds to an attribute stored at attributeArray[k]*/
+                 * holds a question that corresponds to an attribute stored at attributeArray[k].*/
 
                 /* the following if statements tallies the number of characters whose attribute at index k are true, and the number at index k that are false
                  * these values are stored in the fields "numTrue" and "numFalse" of questionArray[k].*/

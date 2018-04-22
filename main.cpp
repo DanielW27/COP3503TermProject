@@ -52,9 +52,11 @@ void questionSelection(vector <Question> questionVector, vector <SuperCharacter>
         i = tempI; // after for loop is exited, updates index variable i to question with ultimately lowest TF ratio.
 
         questionVector[i].askQuestion(); // calls askQuestion method at index i of question vector (index of most appropriate question based on state of all character attributes).
+
         if (questionVector[i].getAlreadyAsked() == true) { //skips to the next question: triggered when user answers don't know.
             continue;
         }
+
         questionVector[i].setAlreadyAskedTrue(); // sets question field of alreadyAsked to true so current question isn't repeated
 
         for (int j = 0; j < superCharVector.size(); j++){ // loops through all characters

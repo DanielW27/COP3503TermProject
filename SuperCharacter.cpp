@@ -94,31 +94,6 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[19] = false;// Char has SECRET IDENTITY
     }
 
-    else if (superTextFile == "Lex Luthor"){
-        name = "Lex Luthor";
-        attributeArray.resize(20);
-        attributeArray[0] = false; // Char is MORALLY GOOD
-        attributeArray[1] = true;// Char is MALE
-        attributeArray[2] = false;// Char can FLY
-        attributeArray[3] = false;// Char wears CAPE
-        attributeArray[4] = false;// Char is MARVEL
-        attributeArray[5] = false;// Char has SUPER POWERS
-        attributeArray[6] = false;// Char is X-MAN
-        attributeArray[7] = false;// Char is AVENGER
-        attributeArray[8] = false;// Char is GUARDIAN
-        attributeArray[9] = false;// Char is JUSTICE LEAGUE
-        attributeArray[10] = false;// Char wears MASK
-        attributeArray[11] = false;// Char wears RED
-        attributeArray[12] = true;// Char wears BLACK
-        attributeArray[13] = true;// Char is RICH
-        attributeArray[14] = false;// Char knows MARTIAL ARTS
-        attributeArray[15] = true;// Char is GENIUS
-        attributeArray[16] = false;// Char has SUPER STRENGTH
-        attributeArray[17] = false;// Char uses MAGIC
-        attributeArray[18] = true;// Char uses TECH
-        attributeArray[19] = false;// Char has SECRET IDENTITY
-    }
-
     else if (superTextFile == "Ra’s al Ghul"){
         name = "Ra’s al Ghul";
         attributeArray.resize(20);
@@ -826,7 +801,7 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[11] = false;// Char wears RED
         attributeArray[12] = false;// Char wears BLACK
         attributeArray[13] = false;// Char is RICH
-        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
         attributeArray[15] = false;// Char is GENIUS
         attributeArray[16] = true;// Char has SUPER STRENGTH
         attributeArray[17] = false;// Char uses MAGIC
@@ -1391,13 +1366,13 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[7] = false;// Char is AVENGER
         attributeArray[8] = false;// Char is GUARDIAN
         attributeArray[9] = false;// Char is JUSTICE LEAGUE
-        attributeArray[10] = true;// Char wears MASK
+        attributeArray[10] = false;// Char wears MASK
         attributeArray[11] = false;// Char wears RED
-        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[12] = false;// Char wears BLACK
         attributeArray[13] = true;// Char is RICH
         attributeArray[14] = true;// Char knows MARTIAL ARTS
         attributeArray[15] = true;// Char is GENIUS
-        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[16] = false;// Char has SUPER STRENGTH
         attributeArray[17] = false;// Char uses MAGIC
         attributeArray[18] = true;// Char uses TECH
         attributeArray[19] = false;// Char has SECRET IDENTITY
@@ -1436,7 +1411,7 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[2] = false;// Char can FLY
         attributeArray[3] = false;// Char wears CAPE
         attributeArray[4] = false;// Char is MARVEL
-        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[5] = false;// Char has SUPER POWERS
         attributeArray[6] = false;// Char is X-MAN
         attributeArray[7] = false;// Char is AVENGER
         attributeArray[8] = false;// Char is GUARDIAN

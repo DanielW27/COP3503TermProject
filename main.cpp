@@ -88,23 +88,23 @@ int main() {
     vector <SuperCharacter> superCharVector;
 
     /*
-     * Receives character names from text file: start FIXME read comments
+     * Receives character names from text file: start
      */
 
-    string tempStr;
-    ifstream infile2("Character List.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+    string tempStr; // temp string that stores current line on each loop
+    ifstream infile2("Character List.txt", ios::in); // "Character List.txt" must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile2.is_open()){
         int counter = 1;
         while (getline(infile2, tempStr)) { // returns null when it reaches an empty line in the file
-            SuperCharacter tempSuperChar(tempStr);
-            superCharVector.push_back(tempSuperChar); //write file to a vector of strings
+            SuperCharacter tempSuperChar(tempStr); // creates an instance of the SuperCharacter class to be stored in SuperCharVector
+            superCharVector.push_back(tempSuperChar); //adds character initialized on last line to SuperCharVector
         }
         infile2.close();
     }
 
     else {
-        cout << "no input file avilable";
+        cout << "Character List.txt not found."; // Triggered if program can't find "Character List.txt"
     }
 
     /*
@@ -113,11 +113,11 @@ int main() {
 
 
     /*
-     *receives questions from external file: start FIXME read comments
+     *receives questions from external file: start
      */
 
     string str;
-    ifstream infile("Question List.txt", ios::in); // test.text must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
+    ifstream infile("Question List.txt", ios::in); // "Question List.txt" must be located in "C:\Users\Brock\CLionProjects\projectName\cmake-build-debug"
 
     if (infile.is_open()){
         int counter = 1;

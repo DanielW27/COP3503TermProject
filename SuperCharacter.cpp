@@ -5,99 +5,6 @@
 #include "SuperCharacter.h"
 #include <fstream>
 
-
-/*bool SuperCharacter::getIsGood() {
-    return isGood;
-}
-
-bool SuperCharacter::getIsMale() {
-    return isMale;
-}
-
-bool SuperCharacter::getCanFly() {
-    return canFly;
-}
-
-bool SuperCharacter::getHasCape() {
-    return hasCape;
-}
-
-bool SuperCharacter::getIsMarvel() {
-    return isMarvel;
-}
-
-bool SuperCharacter::getHasPowers() {
-    return hasPowers;
-}
-
-bool SuperCharacter::getIsXMen() {
-    return isXMen;
-}
-
-bool SuperCharacter::getisAvenger() {
-    return isAvenger;
-}
-
-bool SuperCharacter::getIsGuardian() {
-    return isGuardian;
-}
-
-bool SuperCharacter::getIsJusticeLeague() {
-    return isJusticeLeague;
-}
-
-bool SuperCharacter::getHasMask() {
-    return hasMask;
-}
-
-bool SuperCharacter::getYoungerThan25() {
-    return youngerThan25;
-}
-
-bool SuperCharacter::getWearsRed() {
-    return wearsRed;
-}
-    
-bool SuperCharacter::getHasSecretIdentity() {
-	return hasSecretIdentity;
-}
-
-bool SuperCharacter::getUsesTech() {
-	return usesTech;
-}
-
-bool SuperCharacter::getUsesMagic() {
-	return usesMagic;
-}
-
-bool SuperCharacter::getIsAmerican() {
-	return isAmerican;
-}
-
-bool SuperCharacter::getIsFromEarth() {
-	return isFromEarth;
-}
-
-bool SuperCharacter::getHasSuperStrength() {
-	return hasSuperStrength;
-}
-
-bool SuperCharacter::getIsGenius() {
-	return isGenius;
-}
-
-bool SuperCharacter::getKnowsMartialArts() {
-	return knowsMartialArts;
-}
-
-bool SuperCharacter::getIsRich() {
-	return isRich;
-}
-
-bool SuperCharacter::getWearsBlack() {
-	return wearsBlack;
-}*/
-
 string SuperCharacter::getName() {
     return name;
 }
@@ -334,177 +241,177 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[19] = true;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Starfire"){
-    name = "Starfire";
+        name = "Starfire";
         attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = false;// Char is MALE
-    attributeArray[2] = true;// Char can FLY
-    attributeArray[3] = false;// Char wears CAPE
-    attributeArray[4] = false;// Char is MARVEL
-    attributeArray[5] = true;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = false;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = false;// Char is JUSTICE LEAGUE
-    attributeArray[10] = false;// Char wears MASK
-    attributeArray[11] = false;// Char wears RED
-    attributeArray[12] = false;// Char wears BLACK
-    attributeArray[13] = false;// Char is RICH
-    attributeArray[14] = false;// Char knows MARTIAL ARTS
-    attributeArray[15] = false;// Char is GENIUS
-    attributeArray[16] = false;// Char has SUPER STRENGTH
-    attributeArray[17] = true;// Char uses MAGIC
-    attributeArray[18] = false;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = false;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
 
     else if (superTextFile == "Raven"){
-    name = "Raven";
-            attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = false;// Char is MALE
-    attributeArray[2] = true;// Char can FLY
-    attributeArray[3] = true;// Char wears CAPE
-    attributeArray[4] = false;// Char is MARVEL
-    attributeArray[5] = true;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = false;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = false;// Char is JUSTICE LEAGUE
-    attributeArray[10] = true;// Char wears MASK
-    attributeArray[11] = false;// Char wears RED
-    attributeArray[12] = true;// Char wears BLACK
-    attributeArray[13] = false;// Char is RICH
-    attributeArray[14] = false;// Char knows MARTIAL ARTS
-    attributeArray[15] = false;// Char is GENIUS
-    attributeArray[16] = false;// Char has SUPER STRENGTH
-    attributeArray[17] = true;// Char uses MAGIC
-    attributeArray[18] = false;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        name = "Raven";
+        attributeArray.resize(20);
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = false;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Beast Boy"){
-    name = "Beast Boy";
-            attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = true;// Char is MALE
-    attributeArray[2] = true;// Char can FLY
-    attributeArray[3] = false;// Char wears CAPE
-    attributeArray[4] = false;// Char is MARVEL
-    attributeArray[5] = true;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = false;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = false;// Char is JUSTICE LEAGUE
-    attributeArray[10] = false;// Char wears MASK
-    attributeArray[11] = false;// Char wears RED
-    attributeArray[12] = true;// Char wears BLACK
-    attributeArray[13] = false;// Char is RICH
-    attributeArray[14] = false;// Char knows MARTIAL ARTS
-    attributeArray[15] = false;// Char is GENIUS
-    attributeArray[16] = true;// Char has SUPER STRENGTH
-    attributeArray[17] = true;// Char uses MAGIC
-    attributeArray[18] = false;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        name = "Beast Boy";
+        attributeArray.resize(20);
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Cyborg"){
-    name = "Cyborg";
-            attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = true;// Char is MALE
-    attributeArray[2] = false;// Char can FLY
-    attributeArray[3] = false;// Char wears CAPE
-    attributeArray[4] = false;// Char is MARVEL
-    attributeArray[5] = false;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = false;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = true;// Char is JUSTICE LEAGUE
-    attributeArray[10] = false;// Char wears MASK
-    attributeArray[11] = false;// Char wears RED
-    attributeArray[12] = false;// Char wears BLACK
-    attributeArray[13] = false;// Char is RICH
-    attributeArray[14] = true;// Char knows MARTIAL ARTS
-    attributeArray[15] = true;// Char is GENIUS
-    attributeArray[16] = true;// Char has SUPER STRENGTH
-    attributeArray[17] = false;// Char uses MAGIC
-    attributeArray[18] = true;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        name = "Cyborg";
+        attributeArray.resize(20);
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = true;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Iron Man"){
-    name = "Iron Man";
-            attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = true;// Char is MALE
-    attributeArray[2] = true;// Char can FLY
-    attributeArray[3] = false;// Char wears CAPE
-    attributeArray[4] = true;// Char is MARVEL
-    attributeArray[5] = false;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = true;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = false;// Char is JUSTICE LEAGUE
-    attributeArray[10] = true;// Char wears MASK
-    attributeArray[11] = true;// Char wears RED
-    attributeArray[12] = false;// Char wears BLACK
-    attributeArray[13] = true;// Char is RICH
-    attributeArray[14] = true;// Char knows MARTIAL ARTS
-    attributeArray[15] = true;// Char is GENIUS
-    attributeArray[16] = false;// Char has SUPER STRENGTH
-    attributeArray[17] = false;// Char uses MAGIC
-    attributeArray[18] = true;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        name = "Iron Man";
+        attributeArray.resize(20);
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = true;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = true;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Captain America"){
-    name = "Captain America";
-            attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = true;// Char is MALE
-    attributeArray[2] = false;// Char can FLY
-    attributeArray[3] = false;// Char wears CAPE
-    attributeArray[4] = true;// Char is MARVEL
-    attributeArray[5] = true;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = true;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = false;// Char is JUSTICE LEAGUE
-    attributeArray[10] = true;// Char wears MASK
-    attributeArray[11] = true;// Char wears RED
-    attributeArray[12] = false;// Char wears BLACK
-    attributeArray[13] = false;// Char is RICH
-    attributeArray[14] = true;// Char knows MARTIAL ARTS
-    attributeArray[15] = false;// Char is GENIUS
-    attributeArray[16] = true;// Char has SUPER STRENGTH
-    attributeArray[17] = false;// Char uses MAGIC
-    attributeArray[18] = true;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        name = "Captain America";
+        attributeArray.resize(20);
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = true;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Thor"){
-    name = "Thor";
-            attributeArray.resize(20);
-    attributeArray[0] = true;// Char is MORALLY GOOD
-    attributeArray[1] = true;// Char is MALE
-    attributeArray[2] = true;// Char can FLY
-    attributeArray[3] = true;// Char wears CAPE
-    attributeArray[4] = true;// Char is MARVEL
-    attributeArray[5] = true;// Char has SUPER POWERS
-    attributeArray[6] = false;// Char is X-MAN
-    attributeArray[7] = true;// Char is AVENGER
-    attributeArray[8] = false;// Char is GUARDIAN
-    attributeArray[9] = false;// Char is JUSTICE LEAGUE
-    attributeArray[10] = false;// Char wears MASK
-    attributeArray[11] = true;// Char wears RED
-    attributeArray[12] = true;// Char wears BLACK
-    attributeArray[13] = true;// Char is RICH
-    attributeArray[14] = true;// Char knows MARTIAL ARTS
-    attributeArray[15] = false;// Char is GENIUS
-    attributeArray[16] = true;// Char has SUPER STRENGTH
-    attributeArray[17] = true;// Char uses MAGIC
-    attributeArray[18] = false;// Char uses TECH
-    attributeArray[19] = false;// Char has SECRET IDENTITY
+        name = "Thor";
+        attributeArray.resize(20);
+        attributeArray[0] = true;// Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = true;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = true;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
     }
     else if (superTextFile == "Hulk"){
     name = "Hulk";
-            attributeArray.resize(20);
+        attributeArray.resize(20);
     attributeArray[0] = true;// Char is MORALLY GOOD
     attributeArray[1] = true;// Char is MALE
     attributeArray[2] = false;// Char can FLY
@@ -1346,6 +1253,355 @@ SuperCharacter::SuperCharacter(string superTextFile) {
         attributeArray[19] = false;// Char has SECRET IDENTITY
     }
 
+    else if (superTextFile == "Magneto"){
+        name = "Magneto";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = true;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = true;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Storm"){
+        name = "Storm";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = false;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = true;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Loki"){
+        name = "Loki";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Colossus"){
+        name = "Colossus";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = true;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = true;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Mysterio"){
+        name = "Mysterio";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = true;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Lex Luthor"){
+        name = "Lex Luthor";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = true;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = true;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Joker"){
+        name = "Joker";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Bane"){
+        name = "Bane";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = true;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Wolverine"){
+        name = "Wolverine";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = true;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = true;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Mystique"){
+        name = "Mystique";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = false;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = true;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Professor Xavier"){
+        name = "Professor Xavier";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = true;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = true;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = true;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Daredevil"){
+        name = "Daredevil";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = true;// Char is MARVEL
+        attributeArray[5] = true;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = true;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Harley Quinn"){
+        name = "Harley Quinn";
+        attributeArray.resize(20);
+        attributeArray[0] = false; // Char is MORALLY GOOD
+        attributeArray[1] = false;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = true;// Char wears RED
+        attributeArray[12] = false;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = true;// Char knows MARTIAL ARTS
+        attributeArray[15] = true;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = true;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
+
+    else if (superTextFile == "Alfred"){
+        name = "Alfred";
+        attributeArray.resize(20);
+        attributeArray[0] = true; // Char is MORALLY GOOD
+        attributeArray[1] = true;// Char is MALE
+        attributeArray[2] = false;// Char can FLY
+        attributeArray[3] = false;// Char wears CAPE
+        attributeArray[4] = false;// Char is MARVEL
+        attributeArray[5] = false;// Char has SUPER POWERS
+        attributeArray[6] = false;// Char is X-MAN
+        attributeArray[7] = false;// Char is AVENGER
+        attributeArray[8] = false;// Char is GUARDIAN
+        attributeArray[9] = false;// Char is JUSTICE LEAGUE
+        attributeArray[10] = false;// Char wears MASK
+        attributeArray[11] = false;// Char wears RED
+        attributeArray[12] = true;// Char wears BLACK
+        attributeArray[13] = false;// Char is RICH
+        attributeArray[14] = false;// Char knows MARTIAL ARTS
+        attributeArray[15] = false;// Char is GENIUS
+        attributeArray[16] = false;// Char has SUPER STRENGTH
+        attributeArray[17] = false;// Char uses MAGIC
+        attributeArray[18] = false;// Char uses TECH
+        attributeArray[19] = false;// Char has SECRET IDENTITY
+    }
 
 
 /*
